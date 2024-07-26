@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://bkfuqgcm8rbvr"]
+
+[ext_resource type="Script" path="res://common/item.gd" id="1_ujleu"]
+
+[resource]
+script = ExtResource("1_ujleu")
+name = "Coin"
+description = "A gold coin."

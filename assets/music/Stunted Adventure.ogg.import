@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dgn4yav7cgpoj"
+path="res://.godot/imported/Stunted Adventure.ogg-a3b1e0fef3f01d7ca53798e02a3b0390.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Stunted Adventure.ogg"
+dest_files=["res://.godot/imported/Stunted Adventure.ogg-a3b1e0fef3f01d7ca53798e02a3b0390.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

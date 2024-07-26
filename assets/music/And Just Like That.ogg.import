@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cny2cx64a225d"
+path="res://.godot/imported/And Just Like That.ogg-e16c36388f399e168d8d21add91c10f6.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/And Just Like That.ogg"
+dest_files=["res://.godot/imported/And Just Like That.ogg-e16c36388f399e168d8d21add91c10f6.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

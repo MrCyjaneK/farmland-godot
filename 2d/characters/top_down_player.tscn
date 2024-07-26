@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1wk2tseps8om"]
+
+[ext_resource type="PackedScene" uid="uid://7vhkurl7a7ci" path="res://2d/characters/top_down_character.tscn" id="1_l1fhr"]
+[ext_resource type="Script" path="res://2d/characters/top_down_player.gd" id="2_ghpwv"]
+[ext_resource type="PackedScene" uid="uid://cg6jln88qrf4q" path="res://2d/clamp.tscn" id="3_nql31"]
+
+[node name="TopDownPlayer" instance=ExtResource("1_l1fhr")]
+collision_layer = 1
+script = ExtResource("2_ghpwv")
+
+[node name="Sprite" type="Sprite2D" parent="." index="0"]
+
+[node name="Collision" type="CollisionShape2D" parent="." index="1"]
+
+[node name="Animator" type="AnimationPlayer" parent="." index="2"]
+
+[node name="Clamp" parent="." index="3" node_paths=PackedStringArray("root") instance=ExtResource("3_nql31")]
+callback = 1
+root = NodePath("..")

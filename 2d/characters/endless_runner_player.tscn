@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvg0quni78f72"]
+
+[ext_resource type="PackedScene" uid="uid://hq13ohxtq0cr" path="res://2d/characters/endless_runner_character.tscn" id="1_i353p"]
+[ext_resource type="Script" path="res://2d/characters/endless_runner_player.gd" id="2_j8mxn"]
+
+[node name="EndlessRunnerPlayer" instance=ExtResource("1_i353p")]
+collision_layer = 1
+script = ExtResource("2_j8mxn")
+
+[node name="Sprite" type="Sprite2D" parent="." index="0"]
+
+[node name="Collision" type="CollisionShape2D" parent="." index="1"]
+
+[node name="Animator" type="AnimationPlayer" parent="." index="2"]

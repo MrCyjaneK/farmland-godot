@@ -1,0 +1,119 @@
+[gd_scene load_steps=3 format=3 uid="uid://bds6j84e85c2a"]
+
+[ext_resource type="PackedScene" uid="uid://cw40bayqhctq7" path="res://ui/background.tscn" id="1_3566s"]
+[ext_resource type="Script" path="res://ui/options.gd" id="1_kx1he"]
+
+[node name="Options" type="Control" node_paths=PackedStringArray("focus_control")]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kx1he")
+focus_control = NodePath("Margin/VBox/Options/Fullscreen")
+
+[node name="Background" parent="." instance=ExtResource("1_3566s")]
+layout_mode = 1
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBox" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+
+[node name="Header" type="Label" parent="Margin/VBox"]
+layout_mode = 2
+text = "OPTIONS"
+horizontal_alignment = 1
+
+[node name="Options" type="VBoxContainer" parent="Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Fullscreen" type="CheckBox" parent="Margin/VBox/Options"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "FULLSCREEN"
+
+[node name="General" type="HBoxContainer" parent="Margin/VBox/Options"]
+layout_mode = 2
+
+[node name="General" type="Label" parent="Margin/VBox/Options/General"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "GENERAL"
+
+[node name="GeneralVolume" type="HSlider" parent="Margin/VBox/Options/General"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.01
+
+[node name="Music" type="HBoxContainer" parent="Margin/VBox/Options"]
+layout_mode = 2
+
+[node name="Music" type="Label" parent="Margin/VBox/Options/Music"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "MUSIC"
+
+[node name="MusicVolume" type="HSlider" parent="Margin/VBox/Options/Music"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.01
+
+[node name="Sounds" type="HBoxContainer" parent="Margin/VBox/Options"]
+layout_mode = 2
+
+[node name="Sounds" type="Label" parent="Margin/VBox/Options/Sounds"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SOUNDS"
+
+[node name="SoundsVolume" type="HSlider" parent="Margin/VBox/Options/Sounds"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.01
+
+[node name="HBox" type="HBoxContainer" parent="Margin/VBox"]
+layout_mode = 2
+alignment = 1
+
+[node name="Reset" type="Button" parent="Margin/VBox/HBox"]
+layout_mode = 2
+text = "RESET"
+
+[node name="Back" type="Button" parent="Margin/VBox/HBox"]
+layout_mode = 2
+text = "BACK"
+
+[connection signal="toggled" from="Margin/VBox/Options/Fullscreen" to="." method="_fullscreen"]
+[connection signal="value_changed" from="Margin/VBox/Options/General/GeneralVolume" to="." method="_general_volume_changed"]
+[connection signal="value_changed" from="Margin/VBox/Options/Music/MusicVolume" to="." method="_music_volume_changed"]
+[connection signal="value_changed" from="Margin/VBox/Options/Sounds/SoundsVolume" to="." method="_sounds_volume_changed"]
+[connection signal="pressed" from="Margin/VBox/HBox/Reset" to="." method="_reset"]
+[connection signal="pressed" from="Margin/VBox/HBox/Back" to="." method="_back"]

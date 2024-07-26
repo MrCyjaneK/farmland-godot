@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://djhejwrfeyhxo"]
+
+[ext_resource type="Script" path="res://common/combat/autoheal.gd" id="1_nnal3"]
+
+[node name="Autoheal" type="Node"]
+script = ExtResource("1_nnal3")
