@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb5xgb1r1rlhp"]
+
+[ext_resource type="Script" path="res://levels/level.gd" id="1_6i3tb"]
+[ext_resource type="TileSet" uid="uid://dhr264lyjpv58" path="res://levels/tileset.tres" id="2_7emdn"]
+[ext_resource type="PackedScene" uid="uid://dsl842cl3a2qr" path="res://ui/ui.tscn" id="2_jedpt"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_6i3tb")
+
+[node name="UI" parent="." instance=ExtResource("2_jedpt")]
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="Tiles" type="TileMap" parent="World"]
+y_sort_enabled = true
+tile_set = ExtResource("2_7emdn")
+format = 2
+layer_0/name = "Terrain"
+layer_0/z_index = -1
+layer_1/name = "Props"
+layer_1/y_sort_enabled = true

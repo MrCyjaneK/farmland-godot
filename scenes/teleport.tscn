@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bv2yeta50a11w"]
+
+[ext_resource type="Script" path="res://scenes/teleport.gd" id="1_vqkuf"]
+[ext_resource type="PackedScene" uid="uid://fxrbb167lhio" path="res://scenes/circle.tscn" id="2_ebl1v"]
+[ext_resource type="PackedScene" uid="uid://criu1ug32odbl" path="res://scenes/indicator.tscn" id="3_30e7m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hwfgo"]
+radius = 32.0
+
+[node name="Teleport" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_vqkuf")
+
+[node name="Circle" parent="." instance=ExtResource("2_ebl1v")]
+inner_color = Color(1, 1, 1, 0.247059)
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hwfgo")
+
+[node name="Indicator" parent="." instance=ExtResource("3_30e7m")]

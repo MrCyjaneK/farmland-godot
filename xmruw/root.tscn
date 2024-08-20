@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://fntogjkjyyws"]
+
+[ext_resource type="Theme" uid="uid://cm0anid37hw1i" path="res://ui/theme/theme.tres" id="1_iq7nk"]
+[ext_resource type="Script" path="res://xmruw/root.gd" id="1_to1e2"]
+[ext_resource type="PackedScene" uid="uid://dta4fno5rpcuf" path="res://xmruw/ui/screens/unlock_screen.tscn" id="2_e8i53"]
+
+[node name="Root" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_iq7nk")
+script = ExtResource("1_to1e2")
+main_scene = ExtResource("2_e8i53")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.301961, 0.301961, 0.301961, 1)
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

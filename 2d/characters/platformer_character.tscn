@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://baqvkmha0uu0n"]
-
-[ext_resource type="Script" path="res://2d/characters/platformer_character.gd" id="1_qv602"]
-
-[node name="PlatformerCharacter" type="CharacterBody2D"]
-collision_layer = 0
-collision_mask = 2
-script = ExtResource("1_qv602")
