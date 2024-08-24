@@ -20,7 +20,7 @@ func _ready() -> void:
 			nodes.append(spawn_point)
 			
 			var animal = preload("res://animals/animal.tscn").instantiate()
-			tiles.add_child(animal)
+			world.add_child(animal)
 			animal.set_block_signals(true)
 			animal.global_position = spawn_point.global_position
 			animal.set_block_signals(false)

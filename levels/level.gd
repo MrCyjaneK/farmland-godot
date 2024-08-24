@@ -14,7 +14,7 @@ enum Type {
 ## The music to be played during the level.
 @export var music: MusicStream
 
-@onready var tiles = $World/Tiles
+@onready var world = $World
 
 
 func _ready() -> void:
