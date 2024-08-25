@@ -1,9 +1,10 @@
-[gd_scene load_steps=41 format=3 uid="uid://d1wk2tseps8om"]
+[gd_scene load_steps=47 format=3 uid="uid://d1wk2tseps8om"]
 
 [ext_resource type="PackedScene" uid="uid://7vhkurl7a7ci" path="res://characters/character.tscn" id="1_l1fhr"]
 [ext_resource type="Script" path="res://characters/player.gd" id="2_ghpwv"]
 [ext_resource type="Texture2D" uid="uid://dkm3u1i8wj8ro" path="res://assets/sprites/player/player.png" id="3_gmilu"]
 [ext_resource type="PackedScene" uid="uid://cg6jln88qrf4q" path="res://scenes/clamp.tscn" id="3_nql31"]
+[ext_resource type="Texture2D" uid="uid://c8k3xgb5u28ux" path="res://assets/sprites/boat.png" id="4_s8ugi"]
 [ext_resource type="Script" path="res://addons/finite_state_machine/scripts/finite_state_machine.gd" id="5_jsg1h"]
 [ext_resource type="Script" path="res://characters/states/idle.gd" id="6_8jxqk"]
 [ext_resource type="Script" path="res://characters/states/walk.gd" id="7_vq51f"]
@@ -173,6 +174,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_xnqyo"]
@@ -359,6 +372,170 @@ tracks/2/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_sfi8v"]
+resource_name = "SAIL_DOWN"
+length = 0.60001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_0h32j"]
+resource_name = "SAIL_LEFT"
+length = 0.60001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_eikqj"]
+resource_name = "SAIL_RIGHT"
+length = 0.60001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_sb5x3"]
+resource_name = "SAIL_UP"
+length = 0.60001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 2)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yx5of"]
 _data = {
 "IDLE_DOWN": SubResource("Animation_er3v7"),
@@ -366,11 +543,18 @@ _data = {
 "IDLE_RIGHT": SubResource("Animation_5er46"),
 "IDLE_UP": SubResource("Animation_tsiau"),
 "RESET": SubResource("Animation_im75f"),
+"SAIL_DOWN": SubResource("Animation_sfi8v"),
+"SAIL_LEFT": SubResource("Animation_0h32j"),
+"SAIL_RIGHT": SubResource("Animation_eikqj"),
+"SAIL_UP": SubResource("Animation_sb5x3"),
 "WALK_DOWN": SubResource("Animation_xnqyo"),
 "WALK_LEFT": SubResource("Animation_7hd2i"),
 "WALK_RIGHT": SubResource("Animation_r0u8r"),
 "WALK_UP": SubResource("Animation_6nvgh")
 }
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rsibk"]
+radius = 4.0
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_wkwcj"]
 streams_count = 21
@@ -407,6 +591,10 @@ offset = Vector2(0, -8)
 hframes = 6
 vframes = 10
 
+[node name="Boat" type="Sprite2D" parent="Sprite" index="0"]
+texture = ExtResource("4_s8ugi")
+offset = Vector2(0, -8)
+
 [node name="Collision" type="CollisionShape2D" parent="." index="1"]
 position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_yp77k")
@@ -416,25 +604,35 @@ libraries = {
 "": SubResource("AnimationLibrary_yx5of")
 }
 
-[node name="Clamp" parent="." index="3" node_paths=PackedStringArray("root") instance=ExtResource("3_nql31")]
+[node name="Water" type="Area2D" parent="." index="3"]
+collision_layer = 0
+collision_mask = 4
+
+[node name="Collision" type="CollisionShape2D" parent="Water" index="0"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_rsibk")
+
+[node name="Clamp" parent="." index="4" node_paths=PackedStringArray("root") instance=ExtResource("3_nql31")]
 callback = 1
 root = NodePath("..")
 
-[node name="StateMachine" type="Node" parent="." index="4" node_paths=PackedStringArray("current_state", "animation_player")]
+[node name="StateMachine" type="Node" parent="." index="5" node_paths=PackedStringArray("current_state", "animation_player")]
 script = ExtResource("5_jsg1h")
 current_state = NodePath("Idle")
 animation_player = NodePath("../Animator")
 
-[node name="Idle" type="Node" parent="StateMachine" index="0" node_paths=PackedStringArray("root", "animator")]
+[node name="Idle" type="Node" parent="StateMachine" index="0" node_paths=PackedStringArray("root", "animator", "water")]
 script = ExtResource("6_8jxqk")
 root = NodePath("../..")
 animator = NodePath("../../Animator")
+water = NodePath("../../Water")
 
-[node name="Walk" type="Node" parent="StateMachine" index="1" node_paths=PackedStringArray("root", "animator")]
+[node name="Walk" type="Node" parent="StateMachine" index="1" node_paths=PackedStringArray("root", "animator", "water")]
 script = ExtResource("7_vq51f")
 root = NodePath("../..")
 animator = NodePath("../../Animator")
+water = NodePath("../../Water")
 
-[node name="Footsteps" type="AudioStreamPlayer" parent="." index="5"]
+[node name="Footsteps" type="AudioStreamPlayer" parent="." index="6"]
 stream = SubResource("AudioStreamRandomizer_wkwcj")
 bus = &"Sounds"
