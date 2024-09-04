@@ -113,6 +113,14 @@ texture_hover = ExtResource("4_a8jfo")
 texture_disabled = ExtResource("3_gusln")
 stretch_mode = 5
 
+[node name="Leave" type="Button" parent="Main/Margin"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "Leave"
+
 [node name="Fade" parent="." instance=ExtResource("3_r22ey")]
 
 [node name="VirtualJoystick" parent="." instance=ExtResource("3_1w5c3")]
@@ -128,4 +136,5 @@ action_down = "down"
 
 [connection signal="pressed" from="Main/Margin/FishMargin/Fish" to="." method="fish"]
 [connection signal="pressed" from="Main/Margin/Device" to="." method="toggle_device"]
+[connection signal="pressed" from="Main/Margin/Leave" to="." method="leave"]
 [connection signal="timeout" from="FishingTimer" to="." method="tick_fishing"]

@@ -7,6 +7,10 @@ var animals := 0
 var fishes := 0
 ## The time left for fishing.
 var time_left := 60
+## True when player position should be used.
+var exiting_level := false
+## The player position since the last teleport.
+var player_position = null
 
 var wallet_scene: String
 ## Note: fixes the crash after collecting the last animal.

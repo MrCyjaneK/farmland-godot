@@ -29,6 +29,7 @@ func _ready() -> void:
 		fishing_timer.start()
 	
 	_update()
+	Globals.exiting_level = false
 
 
 ## Handles the logic when the UI is updated. Override to provide custom behavior.
@@ -41,6 +42,7 @@ func _update() -> void:
 	%Fishes.text = "Fishes: %d/%d" % [Globals.fishes, fish_count]
 	%FishMargin.visible = level_type == Level.Type.FISHING
 	%Device.visible = level_type == Level.Type.WORLD
+	%Leave.visible = level_type != Level.Type.WORLD
 	
 	if is_instance_valid(virtual_joystick):
 		virtual_joystick.visible = level_type != Level.Type.FISHING
@@ -56,7 +58,7 @@ func fish() -> void:
 	
 	if Globals.fishes >= fish_count:
 		Globals.reset()
-		get_tree().change_scene_to_packed(load("res://levels/world.tscn"))
+		leave()
 
 
 func tick_fishing() -> void:
@@ -65,8 +67,13 @@ func tick_fishing() -> void:
 	
 	if Globals.time_left <= 0:
 		Globals.reset()
-		get_tree().change_scene_to_packed(load("res://levels/world.tscn"))
+		leave()
 
 
 func toggle_device() -> void:
 	%Root.visible = not %Root.visible
+
+
+func leave() -> void:
+	Globals.exiting_level = true
+	get_tree().change_scene_to_packed(load("res://levels/world.tscn"))

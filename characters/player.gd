@@ -6,6 +6,11 @@ class_name Player
 @onready var water: Area2D = $Water
 
 
+func _ready() -> void:
+	if Globals.exiting_level:
+		position = Globals.player_position
+
+
 func _physics_process(delta: float) -> void:
 	# Get input
 	direction = Input.get_vector(&"left", &"right", &"up", &"down")

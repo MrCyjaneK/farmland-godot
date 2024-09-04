@@ -6,4 +6,4 @@ extends Camera2D
 
 func _ready() -> void:
 	if reset_smoothing_on_ready:
-		reset_smoothing()
+		reset_smoothing.call_deferred()
