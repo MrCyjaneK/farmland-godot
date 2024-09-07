@@ -72,6 +72,9 @@ func tick_fishing() -> void:
 
 func toggle_device() -> void:
 	%Root.visible = not %Root.visible
+	
+	if not %Root.visible:
+		%Root.clear()
 
 
 func leave() -> void:
