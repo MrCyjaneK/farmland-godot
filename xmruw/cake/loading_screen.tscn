@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfgx8w01pw4c2"]
+
+[ext_resource type="Script" path="res://xmruw/cake/loading_screen.gd" id="1_h2bvt"]
+[ext_resource type="Texture2D" uid="uid://cs5qek25gg31" path="res://xmruw/assets/icons/outlined/baseline_loop_black_48dp.png" id="2_0bml4"]
+
+[node name="LoadingScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h2bvt")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.501961)
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="TextureRect" parent="Center"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_0bml4")

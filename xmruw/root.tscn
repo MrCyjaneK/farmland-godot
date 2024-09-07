@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://fntogjkjyyws"]
+[gd_scene load_steps=4 format=3 uid="uid://biy4rt7yrmgsd"]
 
-[ext_resource type="Theme" uid="uid://cm0anid37hw1i" path="res://ui/theme/theme.tres" id="1_iq7nk"]
-[ext_resource type="Script" path="res://xmruw/root.gd" id="1_to1e2"]
-[ext_resource type="StyleBox" uid="uid://bu2dq4ynwbef5" path="res://ui/theme/device_panel.tres" id="2_8gm7s"]
-[ext_resource type="PackedScene" uid="uid://dta4fno5rpcuf" path="res://xmruw/ui/screens/unlock_screen.tscn" id="2_e8i53"]
+[ext_resource type="Theme" uid="uid://cm0anid37hw1i" path="res://ui/theme/theme.tres" id="1_fksc0"]
+[ext_resource type="StyleBox" uid="uid://bu2dq4ynwbef5" path="res://ui/theme/device_panel.tres" id="2_tycqn"]
+[ext_resource type="Script" path="res://xmruw/root.gd" id="3_0f7fe"]
 
 [node name="Root" type="PanelContainer"]
 process_mode = 3
@@ -12,10 +11,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_iq7nk")
-theme_override_styles/panel = ExtResource("2_8gm7s")
-script = ExtResource("1_to1e2")
-main_scene = ExtResource("2_e8i53")
+theme = ExtResource("1_fksc0")
+theme_override_styles/panel = ExtResource("2_tycqn")
+script = ExtResource("3_0f7fe")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 2

@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://0moc0j63x6vm" path="res://assets/sprites/device.png" id="3_gusln"]
 [ext_resource type="PackedScene" uid="uid://rkhyu6n3h5h0" path="res://ui/fade.tscn" id="3_r22ey"]
 [ext_resource type="Texture2D" uid="uid://bm4ek0e7qiqbs" path="res://assets/sprites/device_hovered.png" id="4_a8jfo"]
-[ext_resource type="PackedScene" uid="uid://fntogjkjyyws" path="res://xmruw/root.tscn" id="7_ypl7f"]
+[ext_resource type="PackedScene" uid="uid://biy4rt7yrmgsd" path="res://xmruw/root.tscn" id="7_ypl7f"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_8q4px")

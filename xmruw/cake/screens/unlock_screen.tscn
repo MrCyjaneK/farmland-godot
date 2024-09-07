@@ -1,0 +1,137 @@
+[gd_scene load_steps=8 format=3 uid="uid://c2ifu0esflren"]
+
+[ext_resource type="Script" path="res://xmruw/cake/screens/unlock_screen.gd" id="1_kmfix"]
+[ext_resource type="PackedScene" uid="uid://cejln6wnj2jpx" path="res://xmruw/cake/background.tscn" id="2_hv87t"]
+[ext_resource type="PackedScene" uid="uid://bkuoe4ys1q017" path="res://xmruw/cake/button.tscn" id="2_w283h"]
+[ext_resource type="Texture2D" uid="uid://3seddwry8awc" path="res://xmruw/assets/icons/outlined/baseline_keyboard_black_48dp.png" id="3_rq1x4"]
+[ext_resource type="Texture2D" uid="uid://dips670b4mr88" path="res://xmruw/icon.svg" id="4_rs605"]
+[ext_resource type="Texture2D" uid="uid://dwmh3sgvjpytq" path="res://xmruw/assets/icons/outlined/baseline_backspace_black_48dp.png" id="5_m6nsm"]
+[ext_resource type="Texture2D" uid="uid://b5dcwcej0helm" path="res://xmruw/assets/icons/outlined/baseline_check_black_48dp.png" id="6_r0ojv"]
+
+[node name="UnlockScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kmfix")
+
+[node name="Background" parent="." instance=ExtResource("2_hv87t")]
+layout_mode = 1
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VirtualKeyboard" parent="Margin" instance=ExtResource("2_w283h")]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+icon = ExtResource("3_rq1x4")
+
+[node name="VBox" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 8
+
+[node name="Icon" type="TextureRect" parent="Margin/VBox"]
+layout_mode = 2
+texture = ExtResource("4_rs605")
+stretch_mode = 5
+
+[node name="Unlock" type="Label" parent="Margin/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Unlock your wallet"
+horizontal_alignment = 1
+
+[node name="Error" type="Label" parent="Margin/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+
+[node name="Pin" type="Label" parent="Margin/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 88)
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+
+[node name="Grid" type="GridContainer" parent="Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 32
+theme_override_constants/v_separation = 32
+columns = 3
+
+[node name="1" parent="Margin/VBox/Grid" instance=ExtResource("2_w283h")]
+layout_mode = 2
+text = "1"
+
+[node name="2" parent="Margin/VBox/Grid" instance=ExtResource("2_w283h")]
+layout_mode = 2
+text = "2"
+
+[node name="3" parent="Margin/VBox/Grid" instance=ExtResource("2_w283h")]
+layout_mode = 2
+text = "3"
+
+[node name="4" parent="Margin/VBox/Grid" instance=ExtResource("2_w283h")]
+layout_mode = 2
+text = "4"
+
+[node name="5" parent="Margin/VBox/Grid" instance=ExtResource("2_w283h")]
+layout_mode = 2
+text = "5"
+
+[node name="6" parent="Margin/VBox/Grid" instance=ExtResource("2_w283h")]
+layout_mode = 2
+text = "6"
+
+[node name="7" parent="Margin/VBox/Grid" instance=ExtResource("2_w283h")]
+layout_mode = 2
+text = "7"
+
+[node name="8" parent="Margin/VBox/Grid" instance=ExtResource("2_w283h")]
+layout_mode = 2
+text = "8"
+
+[node name="9" parent="Margin/VBox/Grid" instance=ExtResource("2_w283h")]
+layout_mode = 2
+text = "9"
+
+[node name="Backspace" parent="Margin/VBox/Grid" instance=ExtResource("2_w283h")]
+layout_mode = 2
+icon = ExtResource("5_m6nsm")
+
+[node name="0" parent="Margin/VBox/Grid" instance=ExtResource("2_w283h")]
+layout_mode = 2
+text = "0"
+
+[node name="Unlock" parent="Margin/VBox/Grid" instance=ExtResource("2_w283h")]
+layout_mode = 2
+icon = ExtResource("6_r0ojv")
+
+[connection signal="toggled" from="Margin/VirtualKeyboard" to="." method="virtual_keyboard"]
+[connection signal="pressed" from="Margin/VBox/Grid/1" to="." method="one"]
+[connection signal="pressed" from="Margin/VBox/Grid/2" to="." method="two"]
+[connection signal="pressed" from="Margin/VBox/Grid/3" to="." method="three"]
+[connection signal="pressed" from="Margin/VBox/Grid/4" to="." method="four"]
+[connection signal="pressed" from="Margin/VBox/Grid/5" to="." method="five"]
+[connection signal="pressed" from="Margin/VBox/Grid/6" to="." method="six"]
+[connection signal="pressed" from="Margin/VBox/Grid/7" to="." method="seven"]
+[connection signal="pressed" from="Margin/VBox/Grid/8" to="." method="eight"]
+[connection signal="pressed" from="Margin/VBox/Grid/9" to="." method="nine"]
+[connection signal="pressed" from="Margin/VBox/Grid/Backspace" to="." method="backspace"]
+[connection signal="pressed" from="Margin/VBox/Grid/0" to="." method="zero"]
+[connection signal="pressed" from="Margin/VBox/Grid/Unlock" to="." method="unlock"]
