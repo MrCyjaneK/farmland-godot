@@ -14,7 +14,7 @@ var player_position = null
 
 var wallet_scene: String
 ## Note: fixes the crash after collecting the last animal.
-var world = preload("res://levels/world.tscn")
+var world := preload("res://levels/world.tscn")
 
 
 func _enter_tree() -> void:

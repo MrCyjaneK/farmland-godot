@@ -38,4 +38,5 @@ func _ready() -> void:
 func _ui_updated() -> void:
 	if Globals.animals >= animal_count:
 		Globals.reset()
+		Globals.exiting_level = true
 		get_tree().change_scene_to_packed.call_deferred(Globals.world)

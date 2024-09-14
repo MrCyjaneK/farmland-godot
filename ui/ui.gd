@@ -79,4 +79,4 @@ func toggle_device() -> void:
 
 func leave() -> void:
 	Globals.exiting_level = true
-	get_tree().change_scene_to_packed(load("res://levels/world.tscn"))
+	get_tree().change_scene_to_packed(Globals.world)
