@@ -1,6 +1,0 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cujb3qfeg65mb"]
-
-[ext_resource type="FontFile" uid="uid://cwx77tmtrrfsi" path="res://xmruw/assets/fonts/fira_sans/FiraSans-Regular.ttf" id="1_ea62i"]
-
-[resource]
-default_font = ExtResource("1_ea62i")

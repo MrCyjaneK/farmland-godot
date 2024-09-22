@@ -1,0 +1,3 @@
+[submodule "xmruw"]
+	path = xmruw
+	url = https://github.com/MrCyjaneK/xmruw-godot
